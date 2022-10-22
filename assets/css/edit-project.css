@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.active {
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/* NAVBAR START */
+/* NAVBAR START */
+nav {
+    background-color: #edeff2;
+    height: 10vh;
+    display: flex;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+nav .nav-left {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    padding-left: 70px;
+}
+
+.nav-left .active:hover,
+.not-active:hover {
+    padding-bottom: 8px;
+    border-bottom: 3px solid #08476e;
+    color: #08476e;
+}
+
+nav .nav-right {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    justify-content: end;
+    padding-right: 70px;
+
+}
+
+nav .nav-right a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: #010c1a;
+    border-radius: 5px;
+    padding: 5px 18px;
+    cursor: pointer;
+}
+
+nav .nav-right a:hover {
+    background-color: #08476e;
+    ;
+}
+
+nav .nav-right a:active {
+    font-size: 17px;
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+/* NAVBAR END */
+
+
+/* ADD MY PROJECT FORM */
+
+
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+
+
+.blog-form form div {
+    margin-bottom: 10px;
+}
+
+.start-end-date {
+    display: flex;
+}
+
+.project {
+    background-color: #dae1eb;
+}
+
+
+.project-form {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.project-form .form-container {
+    width: 500px;
+    margin-top: 50px;
+}
+
+.project-name,
+.start-end-date,
+.description,
+.technologies,
+.upload-image {
+    margin-top: 10px;
+}
+
+.project-form .form-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-form form .project-name label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project-form form .start-end-date label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project-form form .description label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.label-tech {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project-form form .technologies label {
+    font-size: 20px;
+}
+
+.project-form form .upload-image label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.project-form .project-name input {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #f4f3f3;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+}
+
+.project-form .project-name input:hover {
+    border: 1px solid #2997db;
+    box-shadow: 0px 0px 5px #2997db;
+}
+
+.project-form .start-end-date input {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #f4f3f3;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+}
+
+.project-form .start-end-date input:hover {
+    border: 1px solid #2997db;
+    box-shadow: 0px 0px 5px #2997db;
+}
+
+.project-form form textarea {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #f4f3f3;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    height: 150px;
+    resize: none;
+}
+
+.project-form form textarea:hover {
+    border: 1px solid #2997db;
+    box-shadow: 0px 0px 5px #2997db;
+}
+
+
+.top-item-technologies {
+    display: flex;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.top-item-technologies div {
+    margin-right: 80px;
+
+}
+
+.top-item-technologies label {
+    padding-top: 0px;
+}
+
+.top-item-technologies label:hover {
+    color: #08476e;
+    font-weight: bold;
+}
+
+.bottom-item-technologies label:hover {
+    color: #08476e;
+    font-weight: bold;
+}
+
+.check-js,
+.check-nodejs,
+.check-reactjs,
+.check-vuejs {
+    width: 20px;
+    height: 20px;
+}
+
+.check-js:hover,
+.check-nodejs:hover,
+.check-reactjs:hover,
+.check-vuejs:hover {
+    border: 1px solid #2997db;
+    box-shadow: 0px 0px 15px #2997db;
+}
+
+
+.bottom-item-technologies {
+    display: flex;
+}
+
+.bottom-item-technologies div {
+    margin-right: 101px;
+}
+
+.project-form form .input-project-image-group {
+    width: 100%;
+    height: 55px;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin-top: 5px;
+    background: #f4f3f3;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.project-form form .input-project-image-group:hover {
+    border: 1px solid #2997db;
+    box-shadow: 0px 0px 5px #2997db;
+}
+
+
+.input-project-image-group label p {
+    font-size: 15px;
+    background-color: #dadfdf;
+    margin-top: 0;
+    padding: 16px 10px;
+    border-radius: 8px;
+    color: #4c5252;
+    box-shadow: 0px 0px 3px #878a8a;
+}
+
+.input-project-image-group label img {
+    margin-bottom: 16px;
+}
+
+.input-project-image-group label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-form form .button-group {
+    text-align: right;
+}
+
+.project-form form button {
+    margin-top: 30px;
+    padding: 8px 35px;
+    font-size: 18px;
+    font-weight: 800;
+    background: #0f0122;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.project-form form button:hover {
+    background-color: #08476e;
+}
+
+.project-form form button:active {
+    font-size: 17px;
+}

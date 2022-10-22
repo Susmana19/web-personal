@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/contact-me.css">
+    <link rel="shortcut icon" href="/assets/images/portfolio.png" type="image/x-icon">
+    <title>Contact Me | Web Personal</title>
+</head>
+<body>
+    
+    <!-- NAVIGASI BAR START-->
+    <nav>
+        <div class="nav-left">
+            <div class="logo">
+                <a href="/">Portfolio</a>
+            </div>
+    
+            <ul>
+                <li>
+                    <a class="active" href="/">Home</a>
+                </li>
+    
+                <li>
+                    <a class="not-active" href="/add-project">Add Project</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="nav-right">
+            <a href="/contact-me">Contact Me</a>
+    
+        </div>
+    
+    
+    </nav>
+    <!-- NAVIGASI BAR END-->
+
+
+   
+    
+        <form action="">
+            <h1>GET IN TOUCH</h1>
+            <div>    
+                <label for="input-name">Name</label>
+                <input id="input-name" type="text" required placeholder="Input name here">
+            </div>
+            
+            <div>
+                <label for="input-email">Email</label>
+                <input id="input-email" type="email" required placeholder="Input email here">
+            </div>
+
+            <div>
+                <label for="input-phone">Phone Number</label>
+                <input id="input-phone" type="tel" required placeholder="Input phone number here">
+            </div>
+            
+            <div>
+                <label for="input-subject">Subject</label>
+                <select id="input-subject" required>
+                    <option value="" disabled selected>Select Option</option>
+                    <option value="Lets Talk">Lets Talk</option>
+                    <option value="Lets Collaboration">Lets Collaboration</option>
+                    <option value="Lets Create project">Lets Create Project</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="input-message">Your Message</label>
+                <textarea id="input-message" cols="20" rows="5" placeholder="Write your message here" required></textarea>
+            </div>
+
+            <div class="button" onclick="submitData()">
+            <button type="submit">Submit</button>
+            </div>
+        </form>
+<script src="/assets/js/contact-me.js""></script>
+</body>
+</html>

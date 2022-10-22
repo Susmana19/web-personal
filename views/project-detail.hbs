@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Detail Project | Web Profile</title>
+    <link rel="shortcut icon" href="/assets/images/portfolio.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/blog-detail.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- NAVIGASI BAR START-->
+    <nav>
+        <div class="nav-left">
+            <div class="logo">
+                <a href="/">Portfolio</a>
+            </div>
+            <ul>
+                <li>
+                    <a class="active" href="/">Home</a>
+                </li>
+    
+                <li>
+                    <a class="not-active" href="/add-project">Add Project</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="nav-right">
+            <a href="/contact-me" target="_blank">Contact Me</a>
+    
+        </div>
+    </nav>
+    <!-- NAVIGASI BAR END-->
+    <br><br>
+
+
+    <!-- Project Detail -->
+    <!-- DYNAMIC CONTENT -->
+    
+   
+    <div class="blog-detail-container">
+        <h1 class="title">{{data.name}}</h1>
+            <div class="blog-detail-container-head">
+                <img class="picture" src="/uploads/{{data.image}}" alt="detail" />
+                <div class="duration-tech">
+                    <h2>Duration</h2>
+                    <div class="duration">
+                        <img src="/assets/images/date.png" alt="">
+                        <p>{{data.start_date}} - {{data.end_date}}</p>
+                    </div>
+                    <div class="duration">
+                        <img src="/assets/images/month.png" alt="">
+                        <p> {{data.distance}} month</p>
+                    </div> <br>
+                    <h2>Technologies</h2>
+                    <br>
+                    <div class="technologies">
+                        {{#each data.technologies}}
+                        <div class="tech-top">
+                            <div class="tech-icon">
+                                <i class="fa-brands fa-{{this}} fa-2xl"></i>
+                            </div>
+                        </div>
+                    {{/each}}
+                    </div>
+                </div>
+            </div>
+        <div class="blog-detail-container-content">
+            <h3>{{data.description}}</h3>
+        </div>
+    </div>
+</body>
+
+</html>

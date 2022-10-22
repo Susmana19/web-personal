@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>Add Project | Web Personal</title>
+    <link rel="shortcut icon" href="/assets/images/portfolio.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/add-project.css" />
+</head>
+
+<body>
+    <!-- NAVIGASI BAR START-->
+    <nav>
+        <div class="nav-left">
+            <div class="logo">
+                <a href="/">Portfolio</a>
+            </div>
+            <ul>
+                <li>
+                    <a class="not-active" href="/">Home</a>
+                </li>
+    
+                <li>
+                    <a class="active" href="/add-project">Add Project</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="nav-right">
+            <a href="/contact-me">Contact Me</a>
+    
+        </div>
+    </nav>
+    <!-- NAVIGASI BAR END-->
+
+    <!-- ADD MY PROJECT FORM START-->
+    <div class="project">
+        <div class="project-form">
+            <div class="form-container">
+                <h1>UPDATE MY PROJECT</h1>
+                    <form action="/edit-project/{{data.id}}" method="post" enctype="multipart/form-data">
+                        <div class="project-name">
+                            <label for="input-project-title">Project Name</label>
+                            <input type="text" id="input-project-tittle" name="inputProjectTittle" placeholder="Input the tittle of project" value="{{data.name}}" />
+                        </div>
+
+                        <div class="start-end-date">
+                            <div style="margin-right: 50px;">
+                                <label for="input-start-date">Start Date</label>
+                                <input type="date" id="input-start-date" name="inputStartDate" value="{{data.start_date}}" />
+                            </div>
+                            <div>
+                                <label for="input-end-date">End Date</label>
+                                <input type="date" id="input-end-date" name="inputEndDate" value="{{data.end_date}}"/>
+                            </div>
+                        </div>
+
+                        <div class="description">
+                            <label for="input-project-desciption">Description</label>
+                            <textarea id="input-project-description" name="projectDescription" placeholder="Input the description of project" value="{{data.description}}"></textarea>
+                        </div>
+
+                        <div class="technologies">
+                            <label class="label-tech">Technologies</label>
+                            <div  class="top-item-technologies">
+                                <div>
+                                    <input class="check-js" type="checkbox" id="js" value="js" name="js">
+                                    <label for="js">Javascript</label>
+                                </div>
+                                <div>
+                                    <input class="check-nodejs" type="checkbox" id="nodejs" value="node-js" name="nodejs">
+                                    <label for="nodejs">Node Js</label>
+                                </div>
+                            </div>
+                            <div class="bottom-item-technologies">
+                                <div>
+                                    <input class="check-reactjs" type="checkbox" id="reactjs" value="react" name="reactjs">
+                                    <label for="reactjs">React Js</label>
+                                </div>
+                                <div>
+                                    <input class="check-vuejs" type="checkbox"  id="vuejs" value="vuejs" name="vuejs">
+                                    <label for="vuejs">Vue Js</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="upload-image">
+                            <label>Upload Image</label>
+                            <input type="file" id="input-project-image" name="inputImage" hidden />
+                            <div class="input-project-image-group">
+                                <label for="input-project-image">
+                                    <p>Choose File</p>
+                                    <img src="/assets/images/files.png" alt="file" />
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="submit">submit</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <!-- ADD MY PROJECT FORM END -->
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/assets/images/portfolio.png" type="image/x-icon">
+    <title>Home | Web Personal</title>
+</head>
+<body>
+    <!-- NAVIGASI BAR START-->
+    <nav>
+        <div class="nav-left">
+            <div class="logo">
+                <a href="/">Portfolio</a>
+            </div>
+
+            <ul>
+                <li>
+                    <a class="active" href="/">Home</a>
+                </li>
+
+                <li>
+                    <a class="not-active" href="/add-project">Add Project</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            {{#if isLogin}}
+            <a class="register" href="#"> <b>Hello, {{user.name}}</b> </a>
+            <a class="login" href="/logout">Logout</a>
+            {{else}}
+            <a class="register" href="/register">Register</a>
+            <a class="login" href="/login">Login</a>
+            {{/if}}
+            <a class="contact-me" href="/contact-me">Contact Me</a>
+        </div>
+
+
+    </nav>
+    <!-- NAVIGASI BAR END-->
+    <!-- CONTAINER START-->
+    <div class="container">
+        <div class="container-content">
+            <div class="content-left">
+                        <div class="profil">
+                        <h1>Hi Welcome to my site</h1>
+                            <p >Hello Everyone!
+                            My name is Susmana.
+                            I am 27<sup>th</sup> years old and i'm from Tangerang. 
+                            I am programming enthusiast. 
+                            Currently, I'm studying about Fullstack Development.
+                            I have a dream to be a professional programmer.
+                            </p>
+            
+                        </div>
+                        
+                        <div class="contact-downloadcv">
+                                    <div class="contact-button">
+                                    <a href="https://t.me/msusmana" target="_blank">Contact</a>
+                                    </div>
+
+                                    <div class="downloadcv">
+                                    <a href="https://drive.google.com/file/d/1b8dR1qBuprwopgcZzBzvIZH05BHGuJ3r/view?usp=sharing" target="_blank" ><p>download CV</p></a>
+                                    <a href="https://drive.google.com/file/d/1b8dR1qBuprwopgcZzBzvIZH05BHGuJ3r/view?usp=sharing" target="_blank"><img src="assets/images/download.png" alt="gambar-download"></a>
+                                    </div>
+                        </div>
+
+                        <div>
+                            <div class="sosmed">
+                                <a target="_blank" href="https://www.linkedin.com/in/mokhamad-susmana-b6598a175/">
+                                <img src="/assets/images/linkedin.png" alt="Linkedin" ></a>
+
+                                <a target="_blank" href="https://www.instagram.com/m.susmana/">
+                                <img src="/assets/images/instagram.png" alt="Instagram"></a>
+
+                                <a target="_blank" href="https://web.facebook.com/mokhamad.susmana.9/">
+                                <img src="/assets/images/facebook.png" alt="Facebook"></a>
+                                
+                                <a target="_blank" href="https://twitter.com/Susmana19">
+                                <img src="/assets/images/twitter.png" alt="Twitter"></a>
+                            </div>
+                        </div>
+            </div>
+
+            <div class="content-right">
+                <div class="picture">
+                    <img src="/assets/images/profil.jpeg" alt="Mokhamad Susmana">
+                    <h2>Mokhamad Susmana</h2>
+                    <p>Fullstack Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTAINER END-->
+
+<!-- LIST PROJECT START -->
+    <h1 class="title-list-project">MY PROJECT</h1>
+    <div id="box-container-list-project-id" class="box-container-list-project">
+        <!-- DYNAMIC CONTENT -->
+        {{#each dataProject}}
+        <div class="container-list-project">
+            <div class="container-list-project-info">
+                <a id="image-list-project" href="/project-detail/{{this.id}}"><img src="/uploads/{{this.image}}" /></a>
+                <h3 id="tittle-list-project">{{this.title}}</h3>
+                <h5>durasi : {{this.distance}} bulan | created by : {{this.name}}</h5>
+                <p id="content-list-project">{{this.description}}</p>
+                {{!-- <p>{{this.awalTanggal}}</p>
+                <p>{{this.akhirTanggal}}</p> --}}
+            </div>
+            
+            <div class="icon-tech-list-project">
+                {{#each technologies}}
+                <i class="fa-brands fa-{{this}} fa-xl"></i>
+                {{/each}}
+            </div>
+
+           {{#if isLogin}}
+            <div class="button-list-project"> 
+                <a href="/edit-project/{{this.id}}">edit</a>
+                <a href="/delete-project/{{this.id}}">delete</a>
+            </div>
+            {{/if}}
+        </div>
+        {{/each}}
+    </div>
+<!-- LIST PROJECT END -->
+
+</body>
+</html>
